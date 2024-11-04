@@ -3,7 +3,7 @@ INTERSECT
 SELECT * FROM job_listings
 
 --  INTERSECT: Returns only the rows present in both queries.
--- If we intersect both this rows it will not work.
+-- If we intersect both this rows it will not work. 
 
 
 SELECT SUM(a)
@@ -18,13 +18,13 @@ FROM (SELECT COUNT(description) - COUNT(DISTINCT description) as a
 
 
 
--- Solution  : using subquery
+-- Solution  : using subquery 
 SELECT SUM(a)
 FROM (SELECT    COUNT(description) - COUNT(DISTINCT description) as a
       FROM      job_listings
       GROUP BY  company_id) a
 
--- Solution 1 : using subquery
+-- Solution 1 : using subquery 
 
 SELECT Count(DISTINCT company_id) AS duplicate_companies
 FROM   (SELECT   company_id,
@@ -33,7 +33,7 @@ FROM   (SELECT   company_id,
                  Count(job_id) AS job_count
         FROM     job_listings
         GROUP BY 1,2,3) cte
-WHERE  job_count > 1
+WHERE  job_count > 1 
 
 
 -- Solution 2 : using CTE
@@ -61,7 +61,7 @@ WHERE  a.job_id <> b.job_id AND a.title=b.title AND a.description=b.description;
 
 
 
--- first approach :
+-- first approach : 
 
 SELECT COUNT(DISTINCT a.job_id) as duplicate_companies
 FROM   job_listings a, job_listings b
