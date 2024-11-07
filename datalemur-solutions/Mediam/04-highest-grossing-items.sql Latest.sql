@@ -21,3 +21,15 @@ FROM product_spend
 WHERE category = 'electronics'
 ORDER BY total_spend DESC
 LIMIT 2) a
+
+with Cte as (SELECT d.department_name, e.name,
+      DENSE_RANK() over(PARTITION BY e.department_id ORDER BY e.salary DESC) as rankk,
+      salary
+FROM employee e
+JOIN department d
+ON e.department_id = d.department_id
+ORDER BY 1, 4 DESC, 2)
+
+SELECT department_name, name, salary
+from cte
+where rankk <= 4
