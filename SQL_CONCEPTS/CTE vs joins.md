@@ -1,12 +1,15 @@
 ### Summary Table
 
-Scenario:--	Use CTE :--:	:--Use Join
-Complex logic requiring modular steps:--	✅	:--
-Recursive queries:--	✅	:--
-Reuse of intermediate results:--	 ✅	:--
-Large number of related tables:--	:--:	✅ :--
-Simple data retrieval and filtering	:--	:--:✅ :--
-Optimizing aggregations	:--	 :--:✅ :--
+## Summary Table: CTE vs. JOIN
+
+| Scenario                                | Use CTE | Use Join |
+|-----------------------------------------|---------|----------|
+| Complex logic requiring modular steps   | ✅       |          |
+| Recursive queries                       | ✅       |          |
+| Reuse of intermediate results           | ✅       |          |
+| Large number of related tables          |         | ✅       |
+| Simple data retrieval and filtering     |         | ✅       |
+| Optimizing aggregations                 |         | ✅       |
 
 
 The decision between using Common Table Expressions (CTEs) and joins in SQL, particularly in PostgreSQL, depends on the specific context of your query, readability needs, and performance considerations. Here are some guidelines on when to use each:
