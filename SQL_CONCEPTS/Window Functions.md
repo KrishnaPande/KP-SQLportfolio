@@ -71,13 +71,35 @@ FROM table;
 **WITHIN GROUP**: Used with aggregation functions like MODE() and MEDIAN() to calculate values over ordered partitions.
 **Window Frames**: PostgreSQL offers flexibility in specifying frames, which can be useful for cumulative or moving window calculations.
 
+# Window frames
+
+Window frames in SQL (and PostgreSQL specifically) define the range of rows that a window function considers for its calculations relative to the current row. This is especially useful in cumulative, moving averages, or other sequential calculations.
+
+### 1. **ROWS**: 
+Defines the frame by a specific number of rows before or after the current row, based on the physical position.
+
+- **Example**: `ROWS BETWEEN 3 PRECEDING AND CURRENT ROW` considers the current row and the three rows before it.
+
+### 2. **RANGE**: 
+Defines the frame based on the logical value of the rows in the ORDER BY clause. Instead of row positions, it uses value ranges.
+
+- **Example**: `RANGE BETWEEN 100 PRECEDING AND CURRENT ROW` considers the current row and any rows with values within 100 units of the current row's value in the ORDER BY column.
+
+### 3. GROUPS: 
+
+Introduced in recent versions of PostgreSQL, this frame groups rows with identical values in the ORDER BY clause.
+
+- **Example**: `GROUPS BETWEEN 1 PRECEDING AND 1 FOLLOWING` considers the current group and one group before and after it.
 
 
+## Window Frame Options
 
+You can define a window frame with these options to control the range precisely:
 
-
-
-
+* **UNBOUNDED PRECEDING**: Includes all rows from the start of the partition up to the current row.
+* **UNBOUNDED FOLLOWING**: Includes all rows from the current row to the end of the partition.
+* **CURRENT ROW**: Includes only the current row.
+* **N PRECEDING / N FOLLOWING**: Includes a specific number of rows before or after the current row.
 
 
 
