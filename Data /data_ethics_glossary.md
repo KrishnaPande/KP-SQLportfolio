@@ -80,3 +80,11 @@
 - Highlight GDPR as a global standard for data protection.
 - Differentiate between similar terms such as **observer bias** and **experimenter bias**.
 - Reinforce the ethical principles of **openness, consent, and transaction transparency**.
+
+___
+
+- **Access control**: Features such as password protection, user permissions, and encryption that are used to protect a spreadsheet
+- **Data security**: Protecting data from unauthorized access or corruption by adopting safety measures
+- **Inbox**: Electronic storage where emails received by an individual are held
+- **Data security** means protecting data from unauthorized access or corruption by putting safety measures in place.
+- **Encryption** uses a unique algorithm to alter data and make it unusable by users and applications that don’t know the algorithm. 
