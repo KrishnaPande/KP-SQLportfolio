@@ -5,7 +5,7 @@ group by 2
 order by 1 desc
 limit 5
 
-* 2️⃣ What is the average price of motorcycles per city tier?
+-- * 2️⃣ What is the average price of motorcycles per city tier?
 
 select ROUND(avg(motorcycle_sales."Price (INR)" ), 2), motorcycle_sales."City Tier" 
 from motorcycle_sales
@@ -28,7 +28,7 @@ from motorcycle_sales
 group by 1
 order by 1 desc
 
-* 5️⃣ Which states have the highest motorcycle sales volume?
+-- * 5️⃣ Which states have the highest motorcycle sales volume?
 
 select 
 	motorcycle_sales.state,
