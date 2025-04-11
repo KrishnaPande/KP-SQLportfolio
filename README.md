@@ -72,9 +72,8 @@ Python scripts used for various purposes including problem-solving and data mani
 
 Feel free to connect or reach out for feedback, collaboration, or questions.
 
-📧 Email: [Your Email]  
-🔗 LinkedIn: [Your LinkedIn]  
-🌐 Portfolio: [Your Portfolio] *(if applicable)*
+📧 Email: kpande352@gmail.com
+🔗 LinkedIn: www.linkedin.com/in/krishna-pande
 
 ---
 
