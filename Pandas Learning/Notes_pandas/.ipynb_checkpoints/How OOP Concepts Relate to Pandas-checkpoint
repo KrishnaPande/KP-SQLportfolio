@@ -1,0 +1,36 @@
+### How OOP Concepts Relate to Pandas
+
+Breaking It Down: df = pd.DataFrame(data)
+pd.DataFrame is a class → DataFrame is a class inside the pandas module.
+
+data is passed to the class constructor → When you pass data, it creates an instance (object) of DataFrame.
+
+df is the object → The newly created DataFrame object is stored in df.
+
+```python
+class DataFrame:
+    def __init__(self, data):
+        self.data = data  # Storing data inside the object
+
+# Creating an object of the class
+df = DataFrame(data)
+
+
+df = pd.DataFrame(data)  # Creating an instance of the DataFrame class
+
+```
+
+
+#### []:
+1. Single column → df['col'] (Series)
+
+2. Row slicing → df[0:5]
+
+#### [[]]:
+
+1. Single/multiple columns → df[['col']] or df[['c1','c2']] (DataFrame)
+
+2. Use .loc/.iloc for advanced row/column slicing.
+
+
+
