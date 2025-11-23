@@ -1,0 +1,8 @@
+Yes, that is correct. Materialization in dbt is the strategy that defines how a model's transformation logic is persisted in the data warehouse. 
+You use the materialized configuration parameter to specify whether the model should be built as one of the following built-in types: 
+view: The default. A virtual table is created via a CREATE VIEW AS statement each run, so the data is always fresh, but the underlying query runs every time the view is queried.
+table: A physical table is created via a CREATE TABLE AS statement each run. This results in faster query performance because the data is precomputed and stored on disk, but the build process is slower, and the data is only as fresh as the last dbt run.
+incremental: A physical table is created and maintained, but subsequent runs only insert or update new or changed records, rather than rebuilding the entire table. This is efficient for large datasets and frequent updates.
+ephemeral: No physical object is created in the database. Instead, the model's SQL is compiled as a Common Table Expression (CTE) and inlined into any downstream models that reference it. This helps keep the data warehouse clean and modular, but the model cannot be queried directly.
+materialized_view: (Database-specific support needed) A hybrid approach that stores the results like a table but can be configured to refresh automatically by the database engine. 
+In essence, you are correct that "materialization" is the terminology for selecting one of these options to determine the physical (or non-physical) form of your data model in the data warehouse
