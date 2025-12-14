@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a2dfe133-c099-45fa-af27-7b78cdff8476" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Plybook improvement SQL/Ecomm/ECOMM_playbook.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQL_CONCEPTS/Medium_question_interview_ready/gaps-and-islands trick.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQL_CONCEPTS/SQL_interview_ready/Only_concept_quick_revision.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQL_CONCEPTS/one_liner_revision_Set/Level 1.1 notes.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Snowflake/Learning_Notes/Learning and Exploring in work/snowflake_file_handling.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Snowflake/Triage Query Understanding/predicate pushdown.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/KP-SQLportfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KP-SQLportfolio.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="34ue3x2xcMFyOmC3YlHC0XEsRZR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/krishna.pande/Documents/GitHub/KP-SQLportfolio&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SQL_CONCEPTS/SQL_interview_ready" />
+      <recent name="$PROJECT_DIR$/pdf_Notes" />
+      <recent name="$PROJECT_DIR$/Resumes" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Run dbt build" type="DbtRunConfiguration" factoryName="DbtRunConfiguration">
+      <option name="dbtCommand" value="build" />
+      <module name="KP-SQLportfolio" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run dbt debug" type="DbtRunConfiguration" factoryName="DbtRunConfiguration">
+      <option name="dbtCommand" value="debug" />
+      <module name="KP-SQLportfolio" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run dbt list" type="DbtRunConfiguration" factoryName="DbtRunConfiguration">
+      <option name="dbtCommand" value="list" />
+      <module name="KP-SQLportfolio" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run dbt run" type="DbtRunConfiguration" factoryName="DbtRunConfiguration">
+      <option name="dbtCommand" value="run" />
+      <module name="KP-SQLportfolio" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run dbt test" type="DbtRunConfiguration" factoryName="DbtRunConfiguration">
+      <option name="dbtCommand" value="test" />
+      <module name="KP-SQLportfolio" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2dfe133-c099-45fa-af27-7b78cdff8476" name="Changes" comment="" />
+      <created>1762067689845</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762067689845</updated>
+      <workItem from="1762067691341" duration="2851000" />
+      <workItem from="1762362848087" duration="4912000" />
+      <workItem from="1762407537025" duration="2743000" />
+      <workItem from="1762629919644" duration="564000" />
+      <workItem from="1763059096199" duration="2068000" />
+      <workItem from="1763144360035" duration="14310000" />
+      <workItem from="1763527544040" duration="2744000" />
+      <workItem from="1763615305068" duration="28000" />
+      <workItem from="1763786068324" duration="9184000" />
+      <workItem from="1763920776061" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
