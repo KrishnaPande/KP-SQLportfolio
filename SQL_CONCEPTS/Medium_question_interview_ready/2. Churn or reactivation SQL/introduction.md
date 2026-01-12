@@ -198,3 +198,160 @@ Answer this in **plain English**, no SQL:
 Reply with 3 short answers.
 
 Once you answer, I’ll give you **Churn / Reactivation SQL Question #1** (medium), then we’ll level it up step by step.
+
+---
+
+Perfect. ✅
+That answer tells me you **understand churn correctly at a business + analytical level**, which is the hardest part.
+
+Let me lock this in cleanly and then we’ll move to SQL questions.
+
+---
+
+## ✅ Your answer — evaluated
+
+> **1. Did churn happen?**
+> Yes
+
+> **2. When did churn happen?**
+> March 8 (March 1 + 7 days)
+
+> **3. Is March 12 a reactivation?**
+> Yes
+
+> **Churn state duration:**
+> March 8 → March 12
+
+✔ **All correct.**
+This is exactly how interviewers expect you to reason.
+
+---
+
+## 🧠 What you’ve just proven
+
+You understand that:
+
+* Churn is **inferred**, not explicitly stored
+* Churn date is **last_activity + threshold**
+* Reactivation happens on the **next activity after churn**
+* Churn is a **state over time**, not a one-time label
+
+Most candidates mess this up. You didn’t.
+
+---
+
+## 🔑 Before SQL: the canonical churn pattern (mental map)
+
+Every churn SQL problem follows this structure:
+
+1. **Order user activity chronologically**
+2. **Compare each activity to the previous one**
+3. **Detect inactivity gaps > threshold**
+4. **Derive churn boundaries**
+5. **Mark reactivation events**
+6. **Aggregate or analyze as needed**
+
+SQL is just the implementation.
+
+---
+
+## 🧱 Core building blocks (logic only, no full query)
+
+### Previous activity
+
+```sql
+LAG(activity_date)
+OVER (PARTITION BY user_id ORDER BY activity_date)
+```
+
+### Gap calculation
+
+```sql
+DATEDIFF(day, prev_activity_date, activity_date)
+```
+
+### Churn boundary detection
+
+```sql
+CASE
+  WHEN prev_activity_date IS NOT NULL
+   AND gap_days > 7
+  THEN 1
+  ELSE 0
+END AS is_churn_event
+```
+
+### Churn date derivation
+
+```sql
+DATEADD(day, 7, prev_activity_date) AS churn_date
+```
+
+### Reactivation detection
+
+```sql
+CASE
+  WHEN is_churn_event = 1
+  THEN activity_date
+END AS reactivation_date
+```
+
+You’ll see these patterns repeated again and again.
+
+---
+
+## 🧠 Common interview traps (you avoided them)
+
+* ❌ Marking churn on the next activity date
+* ❌ Assuming churn is permanent
+* ❌ Ignoring multiple churn–reactivation cycles
+* ❌ Using calendar dates instead of event gaps
+
+Good.
+
+---
+
+## 🎯 Now we move to SQL — Churn / Reactivation Question #1 (Medium)
+
+### **Question**
+
+You are given a table **user_activity**:
+
+| user_id | activity_date |
+| ------- | ------------- |
+| INT     | DATE          |
+
+A user is considered **churned** if they are inactive for **more than 7 days**.
+
+### **Task**
+
+Write SQL logic to identify **each churn event and its corresponding reactivation date** per user.
+
+Output columns:
+
+* `user_id`
+* `churn_date`
+* `reactivation_date`
+
+### **Rules**
+
+* Use window functions
+* Multiple churn/reactivation cycles per user are possible
+* CTEs allowed
+* Do NOT aggregate yet
+* Focus on correctness, not brevity
+
+---
+
+### ✋ For now:
+
+Reply with **only the core logic constructions** (like you asked earlier):
+
+* the `LAG`
+* the `CASE` for churn
+* how you derive churn_date & reactivation_date
+
+No full SELECT / FROM needed yet.
+
+Take your time.
+
